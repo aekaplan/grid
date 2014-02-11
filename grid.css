@@ -50,11 +50,6 @@ header h1 {
   margin-bottom: 2rem;
 }
 
-header sup {
-  color: rgba(255,255,255,0.7);
-  font-size: .8rem;
-}
-
 header p {
   color: rgba(255,255,255,0.7);
   margin: 0 auto;
