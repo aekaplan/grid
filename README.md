@@ -1,5 +1,4 @@
-Grid
-===
+##Grid
 
 A simple guide to responsive design.<br>
 www.adamkaplan.me/grid
