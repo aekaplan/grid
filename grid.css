@@ -435,6 +435,7 @@ img {
   .column.one-fourth {
     margin: 2em 0 0 0;
     width: 100%;
+    float: none;
   }
 
   .column:first-child { margin-top: 0; }
