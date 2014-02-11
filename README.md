@@ -1,7 +1,7 @@
 Grid
 ===
 
-A simple guide to responsive design. <br>
+A simple guide to responsive design.<br>
 www.adamkaplan.me/grid
 
 
@@ -174,3 +174,17 @@ If the browser's screen size is within a set range, a media query will replace t
   }
 }
 ```
+
+####Further Reading
+* [For a Future-Friendly Web](http://alistapart.com/article/for-a-future-friendly-web)
+* [A Book Apart: Responsive Web Design](http://www.abookapart.com/products/responsive-web-design)
+* [Don't Forget the Viewport Meta Tag](http://dev.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972)
+* [Understanding the Humble Clearfix](http://fuseinteractive.ca/blog/understanding-humble-clearfix)
+* [Beginner’s Guide to Responsive Web Design](http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design)
+
+####References
+* [Android Fragmentation Visualized](http://opensignal.com/reports/fragmentation-2013/)
+* [Internet Explorer Box Model](http://en.wikipedia.org/wiki/Internet_Explorer_box_model_bug)
+* [Box Model](http://developer.mozilla.org/en-US/docs/Web/CSS/box_model)
+* [Chrome Developer Tools](http://developers.google.com/chrome-developer-tools/)
+* [Animate.css](http://daneden.github.io/animate.css/)
