@@ -433,9 +433,9 @@ img {
   .column.half,
   .column.one-third,
   .column.one-fourth {
+    float: none;
     margin: 2em 0 0 0;
     width: 100%;
-    float: none;
   }
 
   .column:first-child { margin-top: 0; }
