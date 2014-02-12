@@ -121,7 +121,7 @@ Add size classes to columns to create a reuseable grid system.
 ```
 
 ####6. Create Rows
-Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared with either a `clearfix` or `overflow: hidden`. This clearfix was created by [Nicolas Gallager](http://nicolasgallagher.com/micro-clearfix-hack/).
+Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared with either a `clearfix` or `overflow: hidden`. This clearfix was created by [Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/).
 
 ```
 .clearfix:before,
