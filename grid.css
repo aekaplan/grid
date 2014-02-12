@@ -28,7 +28,6 @@ body {
 -------------------------------------------------------------- */
 header {
   background: #ec6f66;
-  color: #555;
   overflow: hidden;
   text-align: center;
 }
@@ -157,10 +156,6 @@ p {
   color: #999;
   margin: 0 auto;
   max-width: 30rem;
-}
-
-em {
-  font-style: italic;
 }
 
 code {
@@ -395,7 +390,7 @@ img {
   animation-name: fadeInUp;
 }
 
-/*  #Clearfix
+/*  #Clearfix by Nicolas Gallagher
 -------------------------------------------------------------- */
 .container:before,
 .container:after,
