@@ -119,8 +119,9 @@ Add size classes to columns to create a reuseable grid system.
   width: 21.25%;
 }
 ```
+
 ####6. Create Rows
-Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared with either a `clearfix` or `overflow: hidden`. This clearfix was created by Nicolas Gallager.
+Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared with either a `clearfix` or `overflow: hidden`. This clearfix was created by [Nicolas Gallager](http://nicolasgallagher.com/micro-clearfix-hack/).
 
 ```
 .clearfix:before,
@@ -158,6 +159,7 @@ Columns are wrapped in rows to prevent other elements from stacking next to them
   </div>
 </div>
 ```
+
 ####7. Add a Mobile Breakpoint
 If the browser's screen size is within a set range, a media query will replace the CSS the browser uses. This is the bread and butter of responsive web design.
 
