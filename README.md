@@ -170,6 +170,7 @@ If the browser's screen size is within a set range, a media query will replace t
   .column.half,
   .column.one-third,
   .column.one-fourth {
+    float: none;
     margin: 0;
     width: 100%;
   }
