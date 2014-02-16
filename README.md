@@ -68,7 +68,7 @@ A container holds all elements and controls the page's maximum width. Using a co
 
 ```
 <div class="container">
-  <!--Your Content-->
+  <!-- Your Content -->
 </div>
 ```
 
@@ -78,28 +78,22 @@ With mobile first, columns are `block` level (takes up the full width available)
 ```
 <div class="container">
   <div class="column">
-    <!--Your Content-->
-  </div>
-  <div class="column">
-    <!--Your Content-->
-  </div>
-  <div class="column">
-    <!--Your Content-->
+    <!-- Your Content -->
   </div>
 </div>
 ```
 
 ####6. Create Column Sizes
-On larger screens, columns gain `float: left` in order to stack content horizontally. Columns now use padding for gutters, so we no longer need to worry about removing margins.
+On larger screens, columns gain `float: left` in order to stack content horizontally. Columns now use padding for gutters, so you no longer need to worry about removing margins.
 
 ```
 <div class="container">
   <div class="row">
     <div class="column half">
-      <!--Your Content-->
+      <!-- Your Content -->
     </div>
     <div class="column half">
-      <!--Your Content-->
+      <!-- Your Content -->
     </div>
   </div>
 </div>
@@ -129,19 +123,19 @@ Columns are wrapped in rows to prevent other elements from stacking next to them
 <div class="container">
   <div class="row clearfix">
     <div class="column half">
-      <!--Your Content-->
+      <!-- Your Content -->
     </div>
     <div class="column half">
-      <!--Your Content-->
+      <!-- Your Content -->
     </div>
   </div>
 
   <div class="row clearfix">
     <div class="column half">
-      <!--Your Content-->
+      <!-- Your Content -->
     </div>
     <div class="column half">
-      <!--Your Content-->
+      <!-- Your Content -->
     </div>
   </div>
 </div>
@@ -170,10 +164,10 @@ Add the class `.flow-opposite` to columns where you want content to display firs
 <div class="container">
   <div class="row clearfix">
     <div class="column half flow-opposite">
-      <!--Your Content-->
+      <!-- Your Content -->
     </div>
     <div class="column half">
-      <!--Your Content-->
+      <!-- Your Content -->
     </div>
   </div>
 </div>
