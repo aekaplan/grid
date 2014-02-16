@@ -3,7 +3,6 @@
 A simple guide to responsive design.<br>
 www.adamkaplan.me/grid
 
-
 ####Why bother with responsive?
 
 We want our websites to be useable on all devices by responding to the user’s behavior, screen size and screen orientation.
@@ -12,15 +11,30 @@ We want our websites to be useable on all devices by responding to the user’s 
 
 As of 2013, there are thousands of different devices and screen sizes that browse the internet, so it's impossible to design layouts to target them all. Instead, we must take a more fluid approach to design.
 
+####Mobile First
+
+The term “mobile first” gets thrown around a lot lately. What it really means is to start with mobile styles and layer on styles optimized for larger screens only as needed. In other words, your mobile styles become the default and you no longer have to override them later. It’s much simpler!
+
+####Min-width Media Queries
+Introduce layout-specific rules only when you need them. Use `min-width` to layer complexity on your layout as the viewport widens. It’s easier to have all the media queries nearby, rather than at the end of the stylesheet or in a separate document.
+
 ##Steps
 
-####1. Add the Viewport Meta Tag
+####2. Not All Browsers are Created oqual
+Browsers will render your CSS differently. To avoid this, it’s a good idea to use a modern alternative to a reset like [Normalize.css](http://necolas.github.io/normalize.css/), which will render elements more consistently cross-browser. Remember to include it as-is before your stylesheet.
+
+```
+<link rel="stylesheet" href="/css/normalize.css" type="text/css">
+<link rel="stylesheet" href="/css/grid.css" type="text/css">
+```
+
+####2. Add the Viewport Meta Tag
 Place in the `<head>` of your HTML. This enables use of media queries for cross-device layouts.
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-####2. Use box-sizing: border-box
+####3. Use box-sizing: border-box
 Place at the top of your CSS file. The `*` will target all elements on the page.
 ```
 *, *:before, *:after {
@@ -35,93 +49,92 @@ A container holds all elements and controls the page's maximum width. Using a co
 ```
 .container {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 48rem;
   width: 90%;
 }
 ```
 
 ```
-<div class="container"></div>
+<div class="container">
+  <!--Your Content-->
+</div>
 ```
 
 ####4. Create a Column
-A column is a class used for stacking content horizontally. The first margin is removed using the pseudo-class `first-child`.
-
-```
-.column {
-  float: left;
-  margin-left: 5%;
-}
- 
-.column:first-child {
-  margin-left: 0;
-}
-```
+With mobile first, columns are `block` level (takes up the full width available) by default. No additional styles needed!
 
 ```
 <div class="container">
-  <div class="column"></div>
+  <div class="column">
+    <!--Your Content-->
+  </div>
+  <div class="column">
+    <!--Your Content-->
+  </div>
+  <div class="column">
+    <!--Your Content-->
+  </div>
 </div>
 ```
 
 ####5. Create Column Sizes
-Add size classes to columns to create a reuseable grid system.
+On larger screens, columns gain `float: left` in order to stack content horizontally. Columns now use padding for gutters, so we no longer need to worry about removing margins.
 
 ```
 <div class="container">
   <div class="row">
-    <div class="column full"></div>
-  </div>
-  
-  <div class="row">
-    <div class="column two-thirds"></div>
-    <div class="column one-third"></div>
-  </div>
-  
-  <div class="row">
-    <div class="column half"></div>
-    <div class="column half"></div>
-  </div>
-  
-  <div class="row">
-    <div class="column one-third"></div>
-    <div class="column one-third"></div>
-    <div class="column one-third"></div>
-  </div>
-  
-  <div class="row">
-    <div class="column one-fourth"></div>
-    <div class="column one-fourth"></div>
-    <div class="column one-fourth"></div>
-    <div class="column one-fourth"></div>
+    <div class="column half">
+      <!--Your Content-->
+    </div>
+    <div class="column half">
+      <!--Your Content-->
+    </div>
   </div>
 </div>
+
 ```
 
 ```
-.column.full {
-  width: 100%;
-}
-  
-.column.two-thirds {
-  width: 65%;
-}
-  
-.column.half {
-  width: 47.5%;
-}
- 
-.column.one-third {
-  width: 30%;
-}
- 
-.column.one-fourth {
-  width: 21.25%;
+@media (min-width: 40rem) {
+  .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .column.third { width: 33.3%; }
+  .column.fourth { width: 24.95%; }
+  .column.flow-opposite { float: right; }
 }
 ```
 
 ####6. Create Rows
-Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared with either a `clearfix` or `overflow: hidden`. This clearfix was created by [Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/).
+Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared using the popular `clearfix`, which was created by [Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/).
+
+```
+<div class="container">
+  <div class="row clearfix">
+    <div class="column half">
+      <!--Your Content-->
+    </div>
+    <div class="column half">
+      <!--Your Content-->
+    </div>
+  </div>
+
+  <div class="row clearfix">
+    <div class="column half">
+      <!--Your Content-->
+    </div>
+    <div class="column half">
+      <!--Your Content-->
+    </div>
+  </div>
+</div>
+```
 
 ```
 .clearfix:before,
@@ -129,64 +142,53 @@ Columns are wrapped in rows to prevent other elements from stacking next to them
   content: " ";
   display: table;
 }
- 
+
 .clearfix:after {
   clear: both;
 }
- 
+
 .clearfix {
   *zoom: 1;
 }
 ```
 
-```
-.row {
-  overflow: hidden;
-}
-```
+#### Flow Opposite
+Add the class `.flow-opposite` to columns where you want content to display first on mobile but appear on the right on larger screens.
 
 ```
 <div class="container">
-  <div class="row">
-    <div class="column half"></div>
-    <div class="column half"></div>
-  </div>
-  
-  <div class="row">
-    <div class="column one-third"></div>
-    <div class="column one-third"></div>
-    <div class="column one-third"></div>
+  <div class="row clearfix">
+    <div class="column half flow-opposite">
+      <!--Your Content-->
+    </div>
+    <div class="column half">
+      <!--Your Content-->
+    </div>
   </div>
 </div>
-```
-
-####7. Add a Mobile Breakpoint
-If the browser's screen size is within a set range, a media query will replace the CSS the browser uses. This is the bread and butter of responsive web design.
 
 ```
-@media screen and (max-width: 640px) {
-  .column.full,
-  .column.two-thirds,
-  .column.half,
-  .column.one-third,
-  .column.one-fourth {
-    float: none;
-    margin: 0;
-    width: 100%;
-  }
+
+```
+@media (min-width: 40rem) {
+  .column.flow-opposite { float: right; }
 }
 ```
 
 ####Further Reading
-* [For a Future-Friendly Web](http://alistapart.com/article/for-a-future-friendly-web)
+* [A Book Apart: Mobile First](http://www.abookapart.com/products/mobile-first)
 * [A Book Apart: Responsive Web Design](http://www.abookapart.com/products/responsive-web-design)
-* [Don't Forget the Viewport Meta Tag](http://dev.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972)
-* [Understanding the Humble Clearfix](http://fuseinteractive.ca/blog/understanding-humble-clearfix)
 * [Beginner’s Guide to Responsive Web Design](http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design)
+* [Box-sizing: Border-box FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+* [Don't Forget the Viewport Meta Tag](http://dev.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972)
+* [The Many Faces of ‘Mobile First’](http://bradfrostweb.com/blog/mobile/the-many-faces-of-mobile-first/)
+* [Understanding the Humble Clearfix](http://fuseinteractive.ca/blog/understanding-humble-clearfix)
 
 ####References
 * [Android Fragmentation Visualized](http://opensignal.com/reports/fragmentation-2013/)
-* [Internet Explorer Box Model](http://en.wikipedia.org/wiki/Internet_Explorer_box_model_bug)
+* [Animate.css](http://daneden.github.io/animate.css/)
 * [Box Model](http://developer.mozilla.org/en-US/docs/Web/CSS/box_model)
 * [Chrome Developer Tools](http://developers.google.com/chrome-developer-tools/)
-* [Animate.css](http://daneden.github.io/animate.css/)
+* [Code samples by GitHub Gist](https://gist.github.com/aekaplan)
+* [Internet Explorer Box Model](http://en.wikipedia.org/wiki/Internet_Explorer_box_model_bug)
+* [Progressive Enhancement](http://coding.smashingmagazine.com/2009/04/22/progressive-enhancement-what-it-is-and-how-to-use-it/)
