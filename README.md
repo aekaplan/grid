@@ -4,23 +4,35 @@ A simple guide to responsive design.<br>
 www.adamkaplan.me/grid
 
 ####Why bother with responsive?
-
 We want our websites to be useable on all devices by responding to the user’s behavior, screen size and screen orientation.
 
 ####A Fragmented World
-
 As of 2013, there are thousands of different devices and screen sizes that browse the internet, so it's impossible to design layouts to target them all. Instead, we must take a more fluid approach to design.
 
 ####Mobile First
-
 The term “mobile first” gets thrown around a lot lately. What it really means is to start with mobile styles and layer on styles optimized for larger screens only as needed. In other words, your mobile styles become the default and you no longer have to override them later. It’s much simpler!
 
-####Min-width Media Queries
+##Min-width Media Queries
 Introduce layout-specific rules only when you need them. Use `min-width` to layer complexity on your layout as the viewport widens. It’s easier to have all the media queries nearby, rather than at the end of the stylesheet or in a separate document.
+
+```
+/* Small screens (default) */
+html { font-size; 100%; }
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) {
+  html { font-size: 112%; }
+}
+
+/* Large screens (1024px) */
+@media (min-width: 64rem) {
+  html { font-size: 120%; }
+}
+```
 
 ##Steps
 
-####2. Not All Browsers are Created oqual
+####1. Not All Browsers are Created Equal
 Browsers will render your CSS differently. To avoid this, it’s a good idea to use a modern alternative to a reset like [Normalize.css](http://necolas.github.io/normalize.css/), which will render elements more consistently cross-browser. Remember to include it as-is before your stylesheet.
 
 ```
@@ -44,7 +56,7 @@ Place at the top of your CSS file. The `*` will target all elements on the page.
 }
 ```
 
-####3. Create a Container
+####4. Create a Container
 A container holds all elements and controls the page's maximum width. Using a container will make designing for responsive easier!
 ```
 .container {
@@ -60,7 +72,7 @@ A container holds all elements and controls the page's maximum width. Using a co
 </div>
 ```
 
-####4. Create a Column
+####5. Create a Column
 With mobile first, columns are `block` level (takes up the full width available) by default. No additional styles needed!
 
 ```
@@ -77,7 +89,7 @@ With mobile first, columns are `block` level (takes up the full width available)
 </div>
 ```
 
-####5. Create Column Sizes
+####6. Create Column Sizes
 On larger screens, columns gain `float: left` in order to stack content horizontally. Columns now use padding for gutters, so we no longer need to worry about removing margins.
 
 ```
@@ -91,7 +103,6 @@ On larger screens, columns gain `float: left` in order to stack content horizont
     </div>
   </div>
 </div>
-
 ```
 
 ```
@@ -111,7 +122,7 @@ On larger screens, columns gain `float: left` in order to stack content horizont
 }
 ```
 
-####6. Create Rows
+####7. Create Rows
 Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared using the popular `clearfix`, which was created by [Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/).
 
 ```
@@ -166,7 +177,6 @@ Add the class `.flow-opposite` to columns where you want content to display firs
     </div>
   </div>
 </div>
-
 ```
 
 ```
