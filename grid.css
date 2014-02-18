@@ -1,5 +1,6 @@
 /* Layout
--------------------------------------------------------------- */
+   ========================================================================== */
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -33,7 +34,8 @@ body {
 }
 
 /* Header
--------------------------------------------------------------- */
+   ========================================================================== */
+
 header {
   background-color: #497bad;
   text-align: center;
@@ -80,7 +82,8 @@ header a:hover { text-decoration: none; }
 }
 
 /* Section
--------------------------------------------------------------- */
+   ========================================================================== */
+
 section {
   border-top: 1px solid #eee;
   text-align: center;
@@ -94,7 +97,8 @@ section:first-of-type { border-top: none; }
 }
 
 /* Mobile First Grid
--------------------------------------------------------------- */
+   ========================================================================== */
+
 .column { margin-bottom: 1.5rem; }
 
 @media (min-width: 40rem) {
@@ -114,7 +118,8 @@ section:first-of-type { border-top: none; }
 }
 
 /* Typography
--------------------------------------------------------------- */
+   ========================================================================== */
+
 h1, h2, h3, h4, h5 {
   font-weight: 600;
   margin: 0;
@@ -151,6 +156,9 @@ blockquote p {
 
 cite { color: #bbb; }
 
+/* Code
+   ========================================================================== */
+
 code {
   background-color: #f8f8f8;
   -moz-border-radius: 3px;
@@ -165,14 +173,21 @@ code {
   white-space: nowrap;
 }
 
+/* Lists
+   ========================================================================== */
+
 ul {
-  display: inline-block;
   margin: 0;
   text-align: left;
 }
 
+@media (min-width: 40rem) {
+  ul { display: inline-block; }
+}
+
 /* Links
--------------------------------------------------------------- */
+   ========================================================================== */
+
 a {
   color: #497bad;
   text-decoration: none;
@@ -181,19 +196,23 @@ a {
 a:hover { text-decoration: underline; }
 
 /* Buttons
--------------------------------------------------------------- */
+   ========================================================================== */
+
 .button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   background-color: #497bad;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+  border: none;
   color: #fff;
   cursor: pointer;
   display: block;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.7rem 1.5rem;
-  position: relative;
   vertical-align: middle;
   white-space: nowrap;
 }
@@ -211,7 +230,8 @@ a:hover { text-decoration: underline; }
 }
 
 /* Elements
--------------------------------------------------------------- */
+   ========================================================================== */
+
 hr {
   border: 0;
   border-top: 1px solid #ddd;
@@ -254,7 +274,8 @@ img {
 }
 
 /* Examples
--------------------------------------------------------------- */
+   ========================================================================== */
+
 .example {
   border-top: none;
   background-color: #497bad;
@@ -320,7 +341,8 @@ img {
 }
 
 /* Box Model
--------------------------------------------------------------- */
+   ========================================================================== */
+
 .box-model h1 { margin-bottom: 3rem; }
 
 .margin { color: #f9cd9d; }
@@ -329,7 +351,8 @@ img {
 .content { color: #9ec3e5; }
 
 /* Gist Overrides
--------------------------------------------------------------- */
+   ========================================================================== */
+
 .gist .gist-file {
   font-size: .9rem !important;
   margin: 0 auto;
@@ -353,7 +376,8 @@ img {
 }
 
 /* Animate.css by Daniel Eden
--------------------------------------------------------------- */
+   ========================================================================== */
+
 .animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:2s;-moz-animation-duration:2s;-ms-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;}.animated.hinge{-webkit-animation-duration:2s;-moz-animation-duration:2s;-ms-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;}@-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -408,12 +432,14 @@ img {
 }
 
 /* Utilities
--------------------------------------------------------------- */
+   ========================================================================== */
+
 .remove-padding { padding-bottom: 0; }
 .remove-border { border: none; }
 
 /* Clearfix by Nicolas Gallagher
--------------------------------------------------------------- */
+   ========================================================================== */
+
 .clearfix:before,
 .clearfix:after {
   content: " ";
