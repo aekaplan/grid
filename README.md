@@ -12,7 +12,7 @@ As of 2013, there are thousands of different devices and screen sizes that brows
 ####Mobile First
 The term “mobile first” gets thrown around a lot lately. What it really means is to start with mobile styles and layer on styles optimized for larger screens only as needed. In other words, your mobile styles become the default and you no longer have to override them later. It’s much simpler!
 
-> By assuming a flexible but simple layout by default, you can better guard against browsers—with viewports wide and small—that aren’t quite capable of the full responsive layout. “Mobile first” really means “progressive enhancement.” —Ethan Marcotte
+> By assuming a flexible but simple layout by default, you can better guard against browsers—with viewports wide and small—that aren’t quite capable of the full responsive layout. So when we’re talking about layout, “mobile first” really means “progressive enhancement.” —Ethan Marcotte
 
 ##Min-width Media Queries
 Introduce layout-specific rules only when you need them. Use `min-width` to layer complexity on your layout as the viewport widens. It’s easier to have all the media queries nearby, rather than at the end of the stylesheet or in a separate document.
