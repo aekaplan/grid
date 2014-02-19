@@ -19,7 +19,7 @@ Introduce layout-specific rules only when you need them. Use `min-width` to laye
 
 ```
 /* Small screens (default) */
-html { font-size; 100%; }
+html { font-size: 100%; }
 
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
