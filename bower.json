@@ -1,0 +1,10 @@
+{
+  "name": "aekaplan-grid",
+  "version": "1.0.0",
+  "main": "grid.css",
+  "author": "Adam Kaplan",
+  "ignore": [
+    "README.md",
+    "index.html"
+  ]
+}
