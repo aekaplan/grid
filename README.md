@@ -17,7 +17,7 @@ The term “mobile first” gets thrown around a lot lately. What it really mean
 ##Min-width Media Queries
 Introduce layout-specific rules only when you need them. Use `min-width` to layer complexity on your layout as the viewport widens. It’s easier to have all the media queries nearby, rather than at the end of the stylesheet or in a separate document.
 
-```
+```css
 /* Small screens (default) */
 html { font-size: 100%; }
 
@@ -37,20 +37,20 @@ html { font-size: 100%; }
 ####1. Not All Browsers are Created Equal
 Browsers will render your CSS differently. To avoid this, it’s a good idea to use a modern alternative to a reset like [Normalize.css](http://necolas.github.io/normalize.css/), which will render elements more consistently cross-browser. Remember to include it as-is before your stylesheet.
 
-```
-<link rel="stylesheet" href="/css/normalize.css" type="text/css">
-<link rel="stylesheet" href="/css/grid.css" type="text/css">
+```html
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/grid.css">
 ```
 
 ####2. Add the Viewport Meta Tag
 Place in the `<head>` of your HTML. This enables use of media queries for cross-device layouts.
-```
+```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
 ####3. Use box-sizing: border-box
 Place at the top of your CSS file. The `*` will target all elements on the page.
-```
+```css
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -60,7 +60,7 @@ Place at the top of your CSS file. The `*` will target all elements on the page.
 
 ####4. Create a Container
 A container holds all elements and controls the page's maximum width. Using a container will make designing for responsive easier!
-```
+```css
 .container {
   margin: 0 auto;
   max-width: 48rem;
@@ -68,7 +68,7 @@ A container holds all elements and controls the page's maximum width. Using a co
 }
 ```
 
-```
+```html
 <div class="container">
   <!-- Your Content -->
 </div>
@@ -77,7 +77,7 @@ A container holds all elements and controls the page's maximum width. Using a co
 ####5. Create a Column
 With mobile first, columns are `block` level (takes up the full width available) by default. No additional styles needed!
 
-```
+```html
 <div class="container">
   <div class="column">
     <!-- Your Content -->
@@ -88,7 +88,7 @@ With mobile first, columns are `block` level (takes up the full width available)
 ####6. Create Column Sizes
 On larger screens, columns gain `float: left` in order to stack content horizontally. Columns now use padding for gutters, so you no longer need to worry about removing margins.
 
-```
+```html
 <div class="container">
   <div class="row">
     <div class="column half">
@@ -101,7 +101,7 @@ On larger screens, columns gain `float: left` in order to stack content horizont
 </div>
 ```
 
-```
+```css
 @media (min-width: 40rem) {
   .column {
     float: left;
@@ -121,7 +121,7 @@ On larger screens, columns gain `float: left` in order to stack content horizont
 ####7. Create Rows
 Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared using the popular `clearfix`, which was created by [Nicolas Gallagher](http://nicolasgallagher.com/micro-clearfix-hack/).
 
-```
+```html
 <div class="container">
   <div class="row clearfix">
     <div class="column half">
@@ -143,7 +143,7 @@ Columns are wrapped in rows to prevent other elements from stacking next to them
 </div>
 ```
 
-```
+```css
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -162,7 +162,7 @@ Columns are wrapped in rows to prevent other elements from stacking next to them
 #### Flow Opposite
 Add the class `.flow-opposite` to columns where you want content to display first on mobile but appear on the right on larger screens.
 
-```
+```html
 <div class="container">
   <div class="row clearfix">
     <div class="column half flow-opposite">
@@ -175,7 +175,7 @@ Add the class `.flow-opposite` to columns where you want content to display firs
 </div>
 ```
 
-```
+```css
 @media (min-width: 40rem) {
   .column.flow-opposite { float: right; }
 }
