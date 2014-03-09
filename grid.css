@@ -286,7 +286,7 @@ img {
 .example img { margin: 0; }
 
 .fragmentation {
-  background-image: url("/images/grid/fragmentation.png");
+  background-image: url("/images/fragmentation.png");
   background-size: cover;
   min-height: 250px;
 }
