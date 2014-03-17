@@ -18,12 +18,12 @@
     <![endif]-->
 
     <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
   </head>
 
   <body>
     <header class="clearfix">
-      <div class='container'>
+      <div class="container">
         <div class="intro">
           <a href="/grid"><h1>grid</h1></a>
           <p>A simple guide to responsive design.<br>Made by <a href="/" target="_blank">Adam Kaplan</a>.</p>
@@ -33,7 +33,7 @@
     </header>
 
     <section>
-      <div class='container'>
+      <div class="container">
         <img src="/images/mobile-first.png" alt="Mobile First" class="rwd">
         <h1>Why bother with responsive?</h1>
         <p>We want our websites to be useable on all devices by responding to
@@ -46,16 +46,16 @@
     </section>
 
     <section>
-      <div class='container'>
+      <div class="container">
         <h1>A Fragmented World</h1>
-        <p><a href='http://opensignal.com/reports/fragmentation-2013/' target="_blank">As of 2013</a>, there are thousands
+        <p><a href="http://opensignal.com/reports/fragmentation-2013/" target="_blank">As of 2013</a>, there are thousands
         of different devices and screen sizes that browse the internet, so it’s impossible to design layouts to target them
         all. Instead, we must take a more fluid approach to design.</p>
       </div>
     </section>
 
     <section>
-      <div class='container'>
+      <div class="container">
         <h1>Mobile First</h1>
         <p>The term “mobile first” gets thrown around a lot lately. What it really means is to start with mobile
         styles and layer on styles optimized for larger screens only as needed. In other words, your mobile styles become
@@ -77,7 +77,7 @@
     </section>
 
     <section>
-      <div class='container'>
+      <div class="container">
         <h1>Min-width Media Queries</h1>
         <p>Introduce layout-specific rules only when you need them. Use <code>min-width</code> to layer complexity on your
         layout as the viewport widens. It’s easier to have all the media queries nearby, rather than at the end
@@ -88,7 +88,7 @@
     </section>
 
     <section>
-      <div class='container'>
+      <div class="container">
         <div class="circle">1</div>
         <h1>Not All Browsers are Created Equal</h1>
         <p>Browsers will render your CSS differently. To avoid this, it’s a good idea to use a modern
@@ -100,7 +100,7 @@
     </section>
 
     <section>
-      <div class='container'>
+      <div class="container">
         <div class="circle">2</div>
         <h1>Add the Viewport Meta Tag</h1>
         <p>Place in the <code>&lt;head&gt;</code> of your HTML. This enables use of media queries for cross-device layouts.</p>
@@ -151,7 +151,7 @@
     </section>
 
     <section>
-      <div class='container'>
+      <div class="container">
         <div class="circle">3</div>
         <h1>Use box-sizing: border-box</h1>
         <p>Place at the top of your <code>CSS</code> file. The <code>*</code> will target all elements on the page.</p>
@@ -185,7 +185,7 @@
     </section>
 
     <section>
-      <div class='container'>
+      <div class="container">
         <div class="circle">4</div>
         <h1>Create a Container</h1>
         <p>A container holds all elements and controls the page’s maximum width. Using a container will make designing for
@@ -203,7 +203,7 @@
     </section>
 
     <section>
-      <div class='container'>
+      <div class="container">
         <div class="circle">5</div>
         <h1>Create a Column</h1>
         <p>With mobile first, columns are <code>block</code> level (takes up the full width available) by default. No
@@ -234,12 +234,27 @@
     </section>
 
     <section>
-      <div class='container'>
+      <div class="container">
         <div class="circle">6</div>
         <h1>Create Column Sizes</h1>
         <p>On larger screens, columns gain <code>float: left</code> in order to stack content horizontally. Columns now
         use padding for gutters, so you no longer need to worry about removing margins.</p>
         <hr>
+      </div>
+
+      <div class="container gutters">
+        <div class="row clearfix">
+          <div class="column half">
+            <span>.column .half</span>
+          </div>
+
+          <div class="column half">
+            <span>.column .half</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
         <script src="https://gist.github.com/aekaplan/9040799.js"></script>
         <script src="https://gist.github.com/aekaplan/8978515.js"></script>
       </div>
@@ -308,7 +323,7 @@
     </section>
 
     <section>
-      <div class='container'>
+      <div class="container">
         <div class="circle">7</div>
         <h1>Create Rows</h1>
         <p>Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise known as clearing
@@ -345,7 +360,7 @@
     </section>
 
     <section>
-      <div class='container'>
+      <div class="container">
         <h1>Flow Opposite</h1>
         <p>Add the class <code>.flow-opposite</code> to columns where you want content to display first on mobile but
         appear on the right on larger screens.</p>
@@ -370,7 +385,7 @@
     </section>
 
     <section>
-      <div class='container'>
+      <div class="container">
         <h1>Practice Makes Perfect</h1>
         <p>By following these simple steps, you are on the path to responsive
         web design mastery. Keep practicing and help make the web a better,
@@ -391,7 +406,7 @@
               <li><a href="http://www.abookapart.com/products/responsive-web-design" target="_blank">A Book Apart: Responsive Web Design</a></li>
               <li><a href="http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design" target="_blank">Beginner’s Guide to Responsive Web Design</a></li>
               <li><a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw" target="_blank">Box-sizing: Border-box FTW</a></li>
-              <li><a href="http://dev.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972" target="_blank">Don't Forget the Viewport Meta Tag</a></li>
+              <li><a href="http://dev.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972" target="_blank">Don’t Forget the Viewport Meta Tag</a></li>
               <li><a href="http://bradfrostweb.com/blog/mobile/the-many-faces-of-mobile-first/" target="_blank">The Many Faces of ‘Mobile First’</a></li>
               <li><a href="http://fuseinteractive.ca/blog/understanding-humble-clearfix" target="_blank">Understanding the Humble Clearfix</a></li>
             </ul>

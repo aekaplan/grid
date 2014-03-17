@@ -340,6 +340,25 @@ img {
   .row-example .row { padding: 1rem 0 0 0; }
 }
 
+.gutters {
+  border: 2px dashed #eee;
+  margin-bottom: 2rem;
+  max-width: 39rem;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.gutters .column {
+  background: #fb917e;
+  margin-bottom: 1rem;
+}
+
+.gutters span {
+  background: #f8f8f8;
+  color: #999;
+  display: block;
+  padding: 1rem 0;
+}
+
 /* Box Model
    ========================================================================== */
 
@@ -356,7 +375,7 @@ img {
 .gist .gist-file {
   font-size: .9rem !important;
   margin: 0 auto;
-  max-width: 750px;
+  max-width: 39rem;
   overflow: hidden !important;
   text-align: left;
 }
