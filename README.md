@@ -199,9 +199,7 @@ Add the class `.flow-opposite` to columns where you want content to display firs
 * [Internet Explorer Box Model](http://en.wikipedia.org/wiki/Internet_Explorer_box_model_bug)
 * [Progressive Enhancement](http://coding.smashingmagazine.com/2009/04/22/progressive-enhancement-what-it-is-and-how-to-use-it/)
 
-####Translations
-Translations are maintained by their creators and may not always be up to date with the original here.
+##Translations
+Translations are maintained by their creators and may not always be up to date with the original here. Have a translation you'd like to link to? Open a pull request to add it here. Be sure to keep it alphabetical.
 
 * [Portuguese](http://webfatorial.github.io/grid/) - Translated by [webfatorial](http://webfatorial.com/)
-
-Have a translation you'd like to link to? Open a pull request to add it here. Be sure to keep it alphabetical.
