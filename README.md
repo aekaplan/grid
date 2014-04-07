@@ -204,5 +204,6 @@ Translations are maintained by their creators and may not always be up to date w
 
 * [Portuguese](http://webfatorial.github.io/grid/) - Translated by [webfatorial](http://webfatorial.com/)
 * [Chinese](http://geekplux.github.io/grid) - Translated by [GeekPlux](http://www.geekplux.com/)
+* [Japanese](http://maepon.github.io/grid/) - Translated by [Masayuki Maekawa](http://maepon.skpn.com/)
 
 
