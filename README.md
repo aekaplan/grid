@@ -113,7 +113,7 @@ On larger screens, columns gain `float: left` in order to stack content horizont
   .column.two-thirds { width: 66.7%; }
   .column.half { width: 50%; }
   .column.third { width: 33.3%; }
-  .column.fourth { width: 24.95%; }
+  .column.fourth { width: 25%; }
   .column.flow-opposite { float: right; }
 }
 ```
