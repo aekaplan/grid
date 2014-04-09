@@ -202,8 +202,6 @@ Add the class `.flow-opposite` to columns where you want content to display firs
 ##Translations
 Translations are maintained by their creators and may not always be up to date with the original here. Have a translation you'd like to link to? Open a pull request to add it here. Be sure to keep it alphabetical.
 
-* [Portuguese](http://webfatorial.github.io/grid/) - Translated by [webfatorial](http://webfatorial.com/)
 * [Chinese](http://geekplux.github.io/grid) - Translated by [GeekPlux](http://www.geekplux.com/)
 * [Japanese](http://maepon.github.io/grid/) - Translated by [Masayuki Maekawa](http://maepon.skpn.com/)
-
-
+* [Portuguese](http://webfatorial.github.io/grid/) - Translated by [webfatorial](http://webfatorial.com/)
