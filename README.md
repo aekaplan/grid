@@ -206,3 +206,4 @@ Translations are maintained by their creators and may not always be up to date w
 * [Japanese](http://maepon.github.io/grid/) - Translated by [Masayuki Maekawa](http://maepon.skpn.com/)
 * [Portuguese](http://webfatorial.github.io/grid/) - Translated by [webfatorial](http://webfatorial.com/)
 * [Türkçe](http://eminarslan.github.io/grid/) - Çeviren [eminarslan](http://eminarslan.com/)
+* [Ukrainian](http://ivaskevytch.github.io/grid/) - Translated by Ivaskevytch
