@@ -1,3 +1,6 @@
+Grid is a great learning tool but no longer supported. [Learn why](http://adamkaplan.me/grid-retrospective).
+
+
 ##Grid
 
 A simple guide to responsive design.<br>
