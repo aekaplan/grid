@@ -1,4 +1,4 @@
-Grid is a great learning tool but no longer supported. [Learn why](http://adamkaplan.me/blog/grid-retrospective/).
+Grid is a great learning tool but no longer supported. [Learn why](http://adamkaplan.me/blog/grid-retrospective).
 
 
 ## Grid
