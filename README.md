@@ -35,7 +35,7 @@ html { font-size: 100%; }
 }
 ```
 
-## Steps
+## Steps to follow :
 
 #### 1. Not All Browsers are Created Equal
 Browsers will render your CSS differently. To avoid this, it’s a good idea to use a modern alternative to a reset like [Normalize.css](http://necolas.github.io/normalize.css/), which will render elements more consistently cross-browser. Remember to include it as-is before your stylesheet.
